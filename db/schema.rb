@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_01_213521) do
+ActiveRecord::Schema.define(version: 2022_10_01_214045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,9 +22,13 @@ ActiveRecord::Schema.define(version: 2022_10_01_213521) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "folder_id", null: false
+    t.text "content"
+    t.index ["folder_id"], name: "index_notes_on_folder_id"
   end
 
+  add_foreign_key "notes", "folders"
 end
