@@ -1,0 +1,14 @@
+first_note:
+  title: First note
+  content: First content
+  notebook: first_notebook
+
+second_note:
+  title: Second note
+  content: Second content
+  notebook: first_notebook
+
+third_note:
+  title: Third note
+  content: Third content
+  notebook: second_notebook
