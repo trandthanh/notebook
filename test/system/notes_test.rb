@@ -12,8 +12,8 @@ class NotesTest < ApplicationSystemTestCase
     click_on "New note"
     assert_selector "h1", text: "New note"
 
-    fill_in "Title", with: "Capybara quote"
-    click_on "Create note"
+    fill_in "Title", with: "Capybara quotes"
+    click_on "Create Note"
 
     assert_selector "h1", text: @note.folder.name
     assert_text "Capybara quotes"
@@ -30,11 +30,11 @@ class NotesTest < ApplicationSystemTestCase
     visit folder_path(@note.folder)
     assert_selector "h1", text: @note.folder.name
 
-    click_on "Edit", match: :first_note
+    click_on "Edit", match: :first
     assert_selector "h1", text: "Edit note"
 
-    fill_in "Title", with: "Update note"
-    click_on "Update note"
+    fill_in "Title", with: "Updated note"
+    click_on "Update Note"
 
     assert_selector "h1", text: @note.folder.name
     assert_text "Updated note"
@@ -44,7 +44,7 @@ class NotesTest < ApplicationSystemTestCase
     visit folder_path(@note.folder)
     assert_text @note.title
 
-    click_on "Delete", match: :first_note
+    click_on "Delete", match: :first
     assert_no_text @note.title
   end
 end

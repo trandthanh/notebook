@@ -1,14 +1,14 @@
 first_note:
   title: First note
   content: First content
-  notebook: first_folder
+  folder: first_folder
 
 second_note:
   title: Second note
   content: Second content
-  notebook: first_folder
+  folder: first_folder
 
 third_note:
   title: Third note
   content: Third content
-  notebook: second_folder
+  folder: second_folder

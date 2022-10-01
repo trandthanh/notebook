@@ -1,0 +1,8 @@
+<main class="container">
+  <div class="header">
+    <h1><%= @folder.name %></h1>
+    <%= link_to "New note", new_folder_note_path(@folder), class: "btn btn--primary" %>
+  </div>
+
+  <%= render @folder.notes %>
+</main>

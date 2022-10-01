@@ -1,0 +1,7 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to note"), folder_path(@note.folder) %>
+  <div class="header">
+    <h1><%= @note.title %></h1>
+    <%= @note.content %>
+  </div>
+</main>
